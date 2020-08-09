@@ -13,5 +13,5 @@ const uint32_t PROGMEM unicode_map[] = {
   [SPK] = 0x2728,
   [STAR] = 0x2605
   [OM] = 0x0950,
-  [MUS] = 0x266C
+  [MUS] = 0x266C,
 };
