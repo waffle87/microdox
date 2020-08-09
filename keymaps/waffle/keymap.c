@@ -40,7 +40,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [_ADJUST] = LAYOUT(
 //-----------------------------------------------------------------------------------------------//
-  RESET,    RGB_TOG,  RGB_M_G,  RGB_HUI, RGB_SAI,      STAR,    OM,      KC_ASON,  KC_ASUP,  UC_M_WC,
+  RESET,    RGB_TOG,  RGB_M_G,  RGB_HUI, RGB_SAI,      STAR,    _______, KC_ASON,  KC_ASUP,  UC_M_WC,
 //-----------------------------------------------------------------------------------------------//
   EEP_RST,  RGB_MOD,  RGB_M_B,  RGB_HUD, RGB_SAD,      MUS,     _______, KC_ASOFF, KC_ASDN,  UC_M_MA,
 //-----------------------------------------------------------------------------------------------//
