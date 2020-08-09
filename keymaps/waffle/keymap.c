@@ -4,9 +4,6 @@
 #include "unicodes.h"
 #include "macros.h"
 
-bool is_alt_tab_active = false;
-uint16_t alt_tab_timer = 0;
-
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_QWERTY] = LAYOUT(
 //-----------------------------------------------------------------------------------------------//
@@ -52,12 +49,3 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                     XXXXXXX, KC_TRNS, XXXXXXX,      XXXXXXX,  KC_TRNS, TG(3)
 )
 };
-
-void matrix_scan_user(void) {
-  if (is_alt_tab_active) {
-    if (timer_elapsed(alt_tab_timer) > 1000) {
-      unregister_code(KC_LALT);
-      is_alt_tab_active = false;
-    }
-  }
-}

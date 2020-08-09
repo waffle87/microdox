@@ -1,5 +1,8 @@
 #pragma once
 
+bool is_alt_tab_active = false;
+uint16_t alt_tab_timer = 0;
+
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
       case LOWER:
@@ -155,3 +158,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   }
   return true;
 };
+
+void matrix_scan_user(void) {
+  if (is_alt_tab_active) {
+    if (timer_elapsed(alt_tab_timer) > 1000) {
+      unregister_code(KC_LALT);
+      is_alt_tab_active = false;
+    }
+  }
+}
