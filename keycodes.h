@@ -40,3 +40,4 @@ enum custom_keycodes {
 #define CTLESC CTL_T(KC_ESC)
 #define CTLNXT RCTL_T(KC_MNXT)
 #define GPSCR G(KC_PSCR)
+#define STATIC SFT_T(RGBLIGHT_MODE_STATIC_LIGHT)

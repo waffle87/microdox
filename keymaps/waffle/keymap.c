@@ -28,7 +28,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //-----------------------------------------------------------------------------------------------//
   CTLESC,  KC_TAB,  KC_CAPS,  KC_TILD,  KC_GRV,        KC_QUOT,  ALT_TAB,  KC_MPRV,  KC_MPLY,  CTLNXT,
 //-----------------------------------------------------------------------------------------------//
-                    KC_PGUP, KC_TRNS, KC_SPC,      KC_ENT, KC_TRNS, KC_PGDN
+                      KC_PGUP, KC_TRNS, KC_SPC,      KC_ENT, KC_TRNS, KC_PGDN
 ),
 
 [_RAISE] = LAYOUT(
@@ -39,7 +39,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //-----------------------------------------------------------------------------------------------//
   KC_CAPS,  KC_TILD,  CTLZ,     CTLS,     GPSCR,        KC_LEFT,  KC_DOWN,  KC_RGHT, COMP6,  COMPKB,
 //-----------------------------------------------------------------------------------------------//
-                    KC_VOLD, KC_TRNS, KC_SPC,      KC_ENT,  KC_TRNS, KC_VOLU
+                        KC_VOLD, KC_TRNS, KC_SPC,      KC_ENT,  KC_TRNS, KC_VOLU
 ),
 
 [_ADJUST] = LAYOUT(
@@ -48,9 +48,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //-----------------------------------------------------------------------------------------------//
   EEP_RST,  RGB_MOD,  RGB_M_B, RGB_HUD, RGB_SAD,       MUS,     _______, KC_ASOFF, KC_ASDN,  UC_M_MA,
 //-----------------------------------------------------------------------------------------------//
-  KC_LSFT,  RGB_RMOD, RGBLIGHT_MODE_STATIC_LIGHT,   RGB_VAD, RGB_VAI,       _______, _______, _______, _______,   UC_M_LN,
+  KC_LSFT,  RGB_RMOD, STATIC,  RGB_VAD, RGB_VAI,       _______, _______, _______, _______,   UC_M_LN,
 //-----------------------------------------------------------------------------------------------//
-                    XXXXXXX, KC_TRNS, XXXXXXX,      XXXXXXX,  KC_TRNS, TG(3)
+                      XXXXXXX, KC_TRNS, XXXXXXX,      XXXXXXX,  KC_TRNS, TG(3)
 )
 
 };

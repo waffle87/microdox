@@ -6,7 +6,7 @@
 #define PRODUCT_ID      0x0412
 #define DEVICE_VER      0x0000
 #define MANUFACTURER    Boardsource
-#define PRODUCT         waffle-dox
+#define PRODUCT         Waffle-Dox
 
 #define MATRIX_ROWS 8
 #define MATRIX_COLS 5
