@@ -29,8 +29,6 @@
 #define RGBLIGHT_LIMIT_VAL 160
 #endif
 
-#define OLED_FONT_H "keyboards/boardsource/microdox/glcdfont.c"
-
 #define UNICODE_SELECTED_MODES UC_WINC, UC_MAC, UC_LNX
 #define UNICODE_CYCLE_PERSIST false
 
