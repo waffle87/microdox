@@ -15,7 +15,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //-----------------------------------------------------------------------------------------------//
   SFA,     KC_S,    KC_D,    KC_F,    KC_G,         KC_H,    KC_J,    KC_K,    KC_L,    SFCLN,
 //-----------------------------------------------------------------------------------------------//
-  CTLZ,    KC_X,    KC_C,    KC_V,    KC_B,         KC_N,    KC_M,    KC_COMM, KC_DOT,  CTLSLH,
+  CTLTZ,   KC_X,    KC_C,    KC_V,    KC_B,         KC_N,    KC_M,    KC_COMM, KC_DOT,  CTLSLH,
 //-----------------------------------------------------------------------------------------------//
                     KC_LGUI, LOWER, KC_SPC,         KC_BSPC, RAISE,  TG(3)
 ),
@@ -35,18 +35,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //-----------------------------------------------------------------------------------------------//
   KC_MINS,  KC_EQL,   KC_LBRC,  KC_RBRC,  KC_BSLS,      MAKE,     UNIT,     UNIT2,   UNIT3,  UNIT4,
 //-----------------------------------------------------------------------------------------------//
-  KC_UNDS,  KC_PLUS,  KC_LCBR,  KC_RCBR,  KC_PIPE,      CP_PSTE,  KC_UP,    MAKE,    CAD,    SSH_PI,
+  KC_UNDS,  KC_PLUS,  KC_LCBR,  KC_RCBR,  KC_PIPE,      CP_PSTE,  KC_UP,    MAKE,    X(STAR), X(UPAR),
 //-----------------------------------------------------------------------------------------------//
-  KC_CAPS,  KC_TILD,  CTLZ,     CTLS,     GPSCR,        KC_LEFT,  KC_DOWN,  KC_RGHT, COMP6,  COMPKB,
+  KC_CAPS,  KC_TILD,  CTLZ,     CTLS,     GPSCR,        KC_LEFT,  KC_DOWN,  KC_RGHT, CAD,     SSH_PI,
 //-----------------------------------------------------------------------------------------------//
                         KC_VOLD, KC_TRNS, KC_SPC,      KC_ENT,  KC_TRNS, KC_VOLU
 ),
 
 [_ADJUST] = LAYOUT(
 //-----------------------------------------------------------------------------------------------//
-  RESET,    RGB_TOG,  RGB_M_G, RGB_HUI, RGB_SAI,       STAR,    _______, KC_ASON,  KC_ASUP,  UC_M_WC,
+  RESET,    RGB_TOG,  RGB_M_G, RGB_HUI, RGB_SAI,       _______,  _______, KC_ASON,  KC_ASUP,  UC_M_WC,
 //-----------------------------------------------------------------------------------------------//
-  EEP_RST,  RGB_MOD,  RGB_M_B, RGB_HUD, RGB_SAD,       MUS,     _______, KC_ASOFF, KC_ASDN,  UC_M_MA,
+  EEP_RST,  RGB_MOD,  RGB_M_B, RGB_HUD, RGB_SAD,       _______,  _______, KC_ASOFF, KC_ASDN,  UC_M_MA,
 //-----------------------------------------------------------------------------------------------//
   KC_LSFT,  RGB_RMOD, STATIC,  RGB_VAD, RGB_VAI,       _______, _______, _______, _______,   UC_M_LN,
 //-----------------------------------------------------------------------------------------------//

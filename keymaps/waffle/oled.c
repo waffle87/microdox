@@ -22,22 +22,22 @@ static void render_status(void) {
 
   if (layer_state_is(_LOWER)) {
       oled_write_ln_P(blink ? PSTR("       > lo_") : PSTR("       > lo "), false);
-      oled_write_P(PSTR("    Waffle Time!"), false);
+      oled_write_P(PSTR("    Nom Nom"), false);
       oled_write_P(PSTR(""), false);
       oled_write_P(PSTR(""), false);
   } else if (layer_state_is(_RAISE)) {
       oled_write_ln_P(blink ? PSTR("       > hi_") : PSTR("       > hi "), false);
-      oled_write_P(PSTR("    Waffle Time!"), false);
+      oled_write_P(PSTR("    Chomp Chomp"), false);
       oled_write_P(PSTR(""), false);
       oled_write_P(PSTR(""), false);
   } else if (layer_state_is(_ADJUST)) {
       oled_write_ln_P(blink ? PSTR("       > aj_") : PSTR("       > aj "), false);
-      oled_write_P(PSTR("    Wafle Time!"), false);
+      oled_write_P(PSTR("       Waffle Time!"), false);
       oled_write_P(PSTR(""), false);
       oled_write_P(PSTR(""), false);
   } else {
       oled_write_ln_P(blink ? PSTR("       > _  ") : PSTR("       >    "), false);
-      oled_write_P(PSTR("    Waffle Time!"), false);
+      oled_write_P(PSTR("       Waffle Time!"), false);
       oled_write_P(PSTR(""), false);
       oled_write_P(PSTR(""), false);
   }
