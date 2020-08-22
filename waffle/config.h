@@ -11,7 +11,6 @@
 #define MATRIX_ROWS 8
 #define MATRIX_COLS 5
 #define MATRIX_ROW_PINS { B2, B6, B4, B5 }
-
 #define MATRIX_COL_PINS { F4, F5, F6, F7, B1 }
 #define USE_SERIAL
 #define SOFT_SERIAL_PIN D2
@@ -26,8 +25,9 @@
 #define EE_HANDS
 #ifdef RGBLIGHT_ENABLE
 #define RGBLED_NUM 12
-#define RGBLIGHT_LIMIT_VAL 160
 #endif
+
+#define RGBLIGHT_SLEEP
 
 #define UNICODE_SELECTED_MODES UC_WINC, UC_MAC, UC_LNX
 #define UNICODE_CYCLE_PERSIST false

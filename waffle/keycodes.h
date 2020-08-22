@@ -25,7 +25,8 @@ enum custom_keycodes {
   UNIT,
   UNIT2,
   UNIT3,
-  UNIT4
+  UNIT4,
+  UNIT5
 };
 
 #define LOWER MO(_LOWER)

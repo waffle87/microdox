@@ -33,11 +33,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [_RAISE] = LAYOUT(
 //-----------------------------------------------------------------------------------------------//
-  KC_MINS,  KC_EQL,   KC_LBRC,  KC_RBRC,  KC_BSLS,      MAKE,     UNIT,     UNIT2,   UNIT3,  UNIT4,
+  KC_MINS,  KC_EQL,   KC_LBRC,  KC_RBRC,  KC_BSLS,      UNIT,     UNIT2,     UNIT3,   UNIT4,  MAKE,
 //-----------------------------------------------------------------------------------------------//
-  KC_UNDS,  KC_PLUS,  KC_LCBR,  KC_RCBR,  KC_PIPE,      CP_PSTE,  KC_UP,    MAKE,    X(STAR), X(UPAR),
+  KC_UNDS,  KC_PLUS,  KC_LCBR,  KC_RCBR,  KC_PIPE,      CP_PSTE,  KC_UP,    X(SIDE),  X(STAR), X(UPAR),
 //-----------------------------------------------------------------------------------------------//
-  KC_CAPS,  KC_TILD,  CTLZ,     CTLS,     GPSCR,        KC_LEFT,  KC_DOWN,  KC_RGHT, CAD,     SSH_PI,
+  KC_CAPS,  KC_TILD,  CTLZ,     CTLS,     GPSCR,        KC_LEFT,  KC_DOWN,  KC_RGHT,  CAD,     SSH_PI,
 //-----------------------------------------------------------------------------------------------//
                         KC_VOLD, KC_TRNS, KC_SPC,      KC_ENT,  KC_TRNS, KC_VOLU
 ),
@@ -50,7 +50,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //-----------------------------------------------------------------------------------------------//
   KC_LSFT,  RGB_RMOD, STATIC,  RGB_VAD, RGB_VAI,       _______, _______, _______, _______,   UC_M_LN,
 //-----------------------------------------------------------------------------------------------//
-                      XXXXXXX, KC_TRNS, XXXXXXX,      XXXXXXX,  KC_TRNS, TG(3)
+                      _______, KC_TRNS, _______,       _______,  KC_TRNS, TG(3)
 )
 
 };

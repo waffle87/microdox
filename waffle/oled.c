@@ -18,6 +18,44 @@ static void render_logo(void) {
 }
 
 static void render_status(void) {
+  bool blink = (timer_read() % 1000) < 500;
+
+  if (layer_state_is(_LOWER)) {
+    oled_write_ln_P(blink ? PSTR("       > lo_") : PSTR("       > lo "), false);
+    oled_write_P(PSTR("       Layer: Lower\n"), false);
+  } else if (layer_state_is(_RAISE)) {
+    oled_write_ln_P(blink ? PSTR("       > hi_") : PSTR("       > hi "), false);
+    oled_write_P(PSTR("       Layer: Raise\n"), false);
+  } else if (layer_state_is(_ADJUST)) {
+    oled_write_ln_P(blink ? PSTR("       > adj_") : PSTR("       > adj "), false);
+    oled_write_P(PSTR("       Layer: Adjust\n"), false);
+  } else {
+    oled_write_ln_P(blink ? PSTR("       > _ ") : PSTR("       >     "), false);
+    oled_write_P(PSTR("       Layer: Qwerty\n"), false);
+  }
+}
+
+void oled_task_user(void) {
+  if (is_keyboard_master()) {
+    char wpm_string[5];
+
+      oled_write_ln("WPM:", false);
+      snprintf(wpm_string,
+    sizeof(wpm_string), " %3d",
+    get_current_wpm());
+      oled_write(wpm_string, false);
+
+    render_status();
+  } else {
+    render_logo();
+    oled_scroll_left();
+  }
+}
+
+#endif
+
+/*
+static void render_status(void) {
    switch (get_highest_layer(layer_state)) {
     case _QWERTY:
       oled_write_P(PSTR("       Q L R A O\n"), false);
@@ -45,22 +83,4 @@ static void render_status(void) {
       oled_write_P(PSTR("       Layer: Other\n"), false);
   }
 }
-
-void oled_task_user(void) {
-  if (is_keyboard_master()) {
-    char wpm_string[5];
-
-      oled_write_ln("WPM:", false);
-      snprintf(wpm_string,
-    sizeof(wpm_string), " %3d",
-    get_current_wpm());
-      oled_write(wpm_string, false);
-
-    render_status();
-  } else {
-    render_logo();
-    oled_scroll_left();
-  }
-}
-
-#endif
+*/
