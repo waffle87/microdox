@@ -2,12 +2,6 @@
 
 #include "config_common.h"
 
-#define VENDOR_ID       0xF7E0
-#define PRODUCT_ID      0x0412
-#define DEVICE_VER      0x0000
-#define MANUFACTURER    Boardsource
-#define PRODUCT         Waffle-Dox
-
 #define MATRIX_ROWS 8
 #define MATRIX_COLS 5
 #define MATRIX_ROW_PINS { B2, B6, B4, B5 }
@@ -22,7 +16,7 @@
 #define RGBLIGHT_ANIMATIONS
 #define RGB_DI_PIN D3
 #define RGBLED_SPLIT { 6, 6 }
-#define EE_HANDS
+#define MASTER_LEFT
 #ifdef RGBLIGHT_ENABLE
 #define RGBLED_NUM 12
 #endif

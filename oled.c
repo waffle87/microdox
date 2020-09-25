@@ -22,16 +22,16 @@ static void render_status(void) {
 
   if (layer_state_is(_LOWER)) {
     oled_write_ln_P(blink ? PSTR("       > lo_") : PSTR("       > lo "), false);
-    oled_write_P(PSTR("       Layer: Lower\n"), false);
+    oled_write_P(PSTR("       Layer: 001\n"), false);
   } else if (layer_state_is(_RAISE)) {
     oled_write_ln_P(blink ? PSTR("       > hi_") : PSTR("       > hi "), false);
-    oled_write_P(PSTR("       Layer: Raise\n"), false);
+    oled_write_P(PSTR("       Layer: 002\n"), false);
   } else if (layer_state_is(_ADJUST)) {
     oled_write_ln_P(blink ? PSTR("       > adj_") : PSTR("       > adj "), false);
-    oled_write_P(PSTR("       Layer: Adjust\n"), false);
+    oled_write_P(PSTR("       Layer: 003\n"), false);
   } else {
     oled_write_ln_P(blink ? PSTR("       > _ ") : PSTR("       >     "), false);
-    oled_write_P(PSTR("       Layer: Qwerty\n"), false);
+    oled_write_P(PSTR("       Layer: 000\n"), false);
   }
 }
 
@@ -53,34 +53,3 @@ void oled_task_user(void) {
 }
 
 #endif
-
-/*
-static void render_status(void) {
-   switch (get_highest_layer(layer_state)) {
-    case _QWERTY:
-      oled_write_P(PSTR("       Q L R A O\n"), false);
-      oled_write_P(PSTR("       ^\n"), false);
-      oled_write_P(PSTR("       Layer: Qwerty\n"), false);
-      break;
-    case _LOWER:
-      oled_write_P(PSTR("       Q L R A O\n"), false);
-      oled_write_P(PSTR("         ^\n"), false);
-      oled_write_P(PSTR("       Layer: Lower\n"), false);
-      break;
-    case _RAISE:
-      oled_write_P(PSTR("       Q L R A O\n"), false);
-      oled_write_P(PSTR("           ^\n"), false);
-      oled_write_P(PSTR("       Layer: Raise\n"), false);
-      break;
-    case _ADJUST:
-      oled_write_P(PSTR("       Q L R A O\n"), false);
-      oled_write_P(PSTR("             ^\n"), false);
-      oled_write_P(PSTR("       Layer: Adjust\n"), false);
-      break;
-    default:
-      oled_write_P(PSTR("       Q L R A O\n"), false);
-      oled_write_P(PSTR("               ^\n"), false);
-      oled_write_P(PSTR("       Layer: Other\n"), false);
-  }
-}
-*/
