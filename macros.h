@@ -88,14 +88,14 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
         case SETUP:
           if (record->event.pressed) {
-            SEND_STRING("https://docs.qmk.fm/#/newbs_getting_started"SS_TAP(X_ENTER));
+            SEND_STRING("___"SS_TAP(X_ENTER));
           } else {
           }
           break;
 
         case ZAD:
           if (record->event.pressed) {
-            SEND_STRING("https://docs.qmk.fm/#/driver_installation_zadig");
+            SEND_STRING("___");
           } else {
           }
           break;
@@ -109,7 +109,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 /*
         case CD1:
           if (record->event.pressed) {
-            SEND_STRING("cd /c/Users/apple/qmk_firmware"SS_TAP(X_ENTER));
+            SEND_STRING("cd /c/Users/user/qmk_firmware"SS_TAP(X_ENTER));
           } else {
           }
           break;
@@ -129,7 +129,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
       case MAKE:
         if (!record->event.pressed) {
-          SEND_STRING("cd /c/Users/apple/qmk_firmware"SS_TAP(X_ENTER) SS_DELAY(500));
+          SEND_STRING("cd /c/Users/user/qmk_firmware"SS_TAP(X_ENTER) SS_DELAY(500));
           SEND_STRING("make " QMK_KEYBOARD ":" QMK_KEYMAP
 #if (defined(BOOTLOADER_DFU) || defined(BOOTLOADER_LUFA_DFU) || defined(BOOTLOADER_QMK_DFU))
                           ":dfu"
