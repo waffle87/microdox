@@ -3,6 +3,10 @@
 #include "keycodes.h"
 #include "unicodes.h"
 #include "macros.h"
+#include "combos.h"
+#ifdef RGBLIGHT_ENABLE
+#    include "rgb.c"
+#endif
 #ifdef OLED_DRIVER_ENABLE
 #   include "oled.c"
 #endif
@@ -27,29 +31,29 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //-----------------------------------------------------------------------------------------------//
       CTLESC,  KC_TAB,  KC_CAPS,  KC_TILD,  KC_GRV,        KC_QUOT,  ALT_TAB,  KC_MPRV,  KC_MPLY,  CTLNXT,
     //-----------------------------------------------------------------------------------------------//
-                        KC_PGUP,  KC_TRNS,  KC_SPC,        KC_ENT,   KC_TRNS,  KC_PGDN
+                        KC_PGUP,  KC_TRNS,  KC_SPC,        _______,  KC_TRNS,  KC_PGDN
     ),
 
   [_RAISE] = LAYOUT_split_3x5_3(
     //-----------------------------------------------------------------------------------------------//
-      KC_MINS,  KC_EQL,   KC_LBRC,  KC_RBRC,  KC_BSLS,      UNIT,     UNIT2,     UNIT3,   UNIT4,  MAKE,
+      KC_MINS,  KC_EQL,   KC_LBRC,  KC_RBRC,  KC_BSLS,      UNIT,     UNIT2,    GIT,      CONF,  MAKE,
     //-----------------------------------------------------------------------------------------------//
-      KC_UNDS,  KC_PLUS,  KC_LCBR,  KC_RCBR,  KC_PIPE,      CP_PSTE,  KC_UP,    X(HAP),  X(SIDE), X(UPAR),
+      KC_UNDS,  KC_PLUS,  KC_LCBR,  KC_RCBR,  KC_PIPE,      ALT_TAB,  KC_UP,    X(HAP),  X(SIDE),  X(UPAR),
     //-----------------------------------------------------------------------------------------------//
-      KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,        KC_LEFT,  KC_DOWN,  KC_RGHT,  CAD,     SSH_PI,
+      KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,        KC_LEFT,  KC_DOWN,  KC_RGHT,  ZAD,     SETUP,
     //-----------------------------------------------------------------------------------------------//
-                            KC_VOLD, KC_TRNS, KC_SPC,      KC_ENT,  KC_TRNS, KC_VOLU
+                            KC_VOLD, KC_TRNS, KC_SPC,       _______,  KC_TRNS, KC_VOLU
     ),
 
   [_ADJUST] = LAYOUT_split_3x5_3(
     //-----------------------------------------------------------------------------------------------//
-      RESET,    RGB_TOG,  RGB_M_G, RGB_HUI, RGB_SAI,       _______,  _______, KC_ASON,  KC_ASUP,  UC_M_WC,
+      RESET,    RGB_TOG,  RGB_HUI, _______, _______,       _______,  _______, KC_ASON,  KC_ASUP,  UC_M_WC,
     //-----------------------------------------------------------------------------------------------//
-      EEP_RST,  RGB_MOD,  RGB_M_B, RGB_HUD, RGB_SAD,       _______,  _______, KC_ASOFF, KC_ASDN,  UC_M_MA,
+      EEP_RST,  RGB_VAI,  RGB_HUD, _______, _______,       _______,  _______, KC_ASOFF, KC_ASDN,  UC_M_MA,
     //-----------------------------------------------------------------------------------------------//
-      KC_LSFT,  RGB_RMOD, STATIC,  RGB_VAD, RGB_VAI,       _______,  _______, CG_SWAP,  CG_NORM,  UC_M_LN,
+      KC_LSFT,  RGB_VAD,  RGB_SAI, _______, _______,       _______,  _______, CG_SWAP,  CG_NORM,  UC_M_LN,
     //-----------------------------------------------------------------------------------------------//
-                          _______, KC_TRNS, _______,       _______,  KC_TRNS, TG(3)
+                          RGB_SAD, KC_TRNS, _______,       _______,  KC_TRNS, TG(3)
     )
 
 };

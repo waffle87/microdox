@@ -43,3 +43,8 @@
 #define TAPPING_TERM 200
 
 #define NO_ACTION_ONESHOT
+
+#ifdef COMBO_ENABLE
+  #define COMBO_COUNT 1
+  #define COMBO_TERM 180
+#endif

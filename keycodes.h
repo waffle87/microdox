@@ -12,21 +12,22 @@ enum custom_keycodes {
   LOWER,
   RAISE,
   ADJUST,
-  CP_PSTE,
-  SSH_PI,
+//  CP_PSTE,
+//  SSH_PI,
   ALT_TAB,
-  SPD_TP,
-  COMP6,
-  COMPKB,
-  CTLS,
-  CTLZ,
+//  CTLS,
   MAKE,
-  CAD,
   UNIT,
   UNIT2,
-  UNIT3,
-  UNIT4,
-  UNIT5
+//  UNIT4,
+//  UNIT5,
+  GIT,
+//  CAD,
+//  UNIT3,
+  SETUP,
+  ZAD,
+  CONF,
+//  CD1
 };
 
 #define LOWER MO(_LOWER)
