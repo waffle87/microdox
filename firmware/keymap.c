@@ -31,7 +31,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //-----------------------------------------------------------------------------------------------//
       CTLESC,  KC_TAB,  KC_CAPS,  KC_TILD,  KC_GRV,        KC_QUOT,  ALT_TAB,  KC_MPRV,  KC_MPLY,  CTLNXT,
     //-----------------------------------------------------------------------------------------------//
-                        KC_PGUP,  KC_TRNS,  KC_SPC,        _______,  KC_TRNS,  KC_PGDN
+                        KC_PGUP,  KC_TRNS,  KC_SPC,        KC_BSPC,  KC_TRNS,  KC_PGDN
     ),
 
   [_RAISE] = LAYOUT_split_3x5_3(
@@ -42,7 +42,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //-----------------------------------------------------------------------------------------------//
       KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,        KC_LEFT,  KC_DOWN,  KC_RGHT,  ZAD,     SETUP,
     //-----------------------------------------------------------------------------------------------//
-                            KC_VOLD, KC_TRNS, KC_SPC,       _______,  KC_TRNS, KC_VOLU
+                            KC_VOLD, KC_TRNS, KC_SPC,       KC_BSPC,  KC_TRNS, KC_VOLU
     ),
 
   [_ADJUST] = LAYOUT_split_3x5_3(
