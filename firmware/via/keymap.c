@@ -1,5 +1,5 @@
 /*
-Copyright 2020 Cole Smith <cole@boadsource.xyz>
+Copyright 2020 Jack Sangdahl <@toastedmangoes>
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -27,8 +27,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define CTRL_A MT(MOD_LCTL,KC_A)
 #define PREVWINDOW MT(MOD_LCTL, KC_LEFT)
 #define NEXTWINDOW MT(MOD_LCTL, KC_RGHT)
-
-
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_split_3x5_3(
