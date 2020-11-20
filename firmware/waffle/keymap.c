@@ -36,7 +36,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_RAISE] = LAYOUT_split_3x5_3(
     //-----------------------------------------------------------------------------------------------//
-      KC_MINS,  KC_EQL,   KC_LBRC,  KC_RBRC,  KC_BSLS,      UNIT,     UNIT2,    GIT,      CONF,  MAKE,
+      KC_MINS,  KC_EQL,   KC_LBRC,  KC_RBRC,  KC_BSLS,      UNIT,     UNIT2,    GIT,      CONF,    MAKE,
     //-----------------------------------------------------------------------------------------------//
       KC_UNDS,  KC_PLUS,  KC_LCBR,  KC_RCBR,  KC_PIPE,      ALT_TAB,  KC_UP,    X(HAP),  X(SIDE),  X(UPAR),
     //-----------------------------------------------------------------------------------------------//
