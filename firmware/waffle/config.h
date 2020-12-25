@@ -1,50 +1,75 @@
+/* Copyright 2020 @wafflekeebs/@waffle#6666
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+
 #pragma once
 
-#include "config_common.h"
+#define EE_HANDS
+//#defne MASTER_RIGHT
+//#define MASTER_LEFT
 
-#define MATRIX_ROWS 8
-#define MATRIX_COLS 5
-#define MATRIX_ROW_PINS { B2, B6, B4, B5 }
-#define MATRIX_COL_PINS { F4, F5, F6, F7, B1 }
-#define USE_SERIAL
-#define SOFT_SERIAL_PIN D2
+#define USE_SERIAL_PD2
 
-#define DEBOUNCE 5
-
-#define DIODE_DIRECTION COL2ROW
-
-#define RGBLIGHT_ANIMATIONS
-#define RGB_DI_PIN D3
-#define RGBLED_SPLIT { 6, 6 }
-#define MASTER_LEFT
 #ifdef RGBLIGHT_ENABLE
-#define RGBLED_NUM 12
+    #undef RGBLED_NUM
+    #define RGBLED_NUM 27
+    #undef RGBLIGHT_ANIMATIONS
+    #define RGBLIGHT_EFFECT_RAINBOW_SWIRL
+    #define RGBLIGHT_EFFECT_STATIC_GRADIENT
+    #define RGBLIGHT_LIMIT_VAL 120
+    #define RGBLIGHT_HUE_STEP 5
+    #define RGBLIGHT_SAT_STEP 5
+    #define RGBLIGHT_VAL_STEP 17
+    #define RGBLED_SPLIT
+    #define RGBLIGHT_SLEEP
 #endif
 
-#define RGBLIGHT_SLEEP
+#ifdef MOUSEKEY_ENABLE
+#define MOUSEKEY_DELAY 300
+#define MOUSEKEY_INTERVAL 16
+#define MOUSEKEY_MAX_SPEED 5
+#endif
 
+#ifdef UNICODEMAP_ENABLE
 #define UNICODE_SELECTED_MODES UC_WINC, UC_MAC, UC_LNX
 #define UNICODE_CYCLE_PERSIST false
+#endif
 
+#ifdef AUTOSHIFT_ENABLE
 #define AUTO_SHIFT_MODIFIERS
-#define AUTO_SHIFT_TIMEOUT 150
+#define AUTO_SHIFT_TIMEOUT 170
 #define NO_AUTO_SHIFT_SPECIAL
 #define NO_AUTO_SHIFT_NUMERIC
-
-#ifdef LOCKING_SUPPORT_ENABLE
-#    undef LOCKING_SUPPORT_ENABLE
 #endif
-#ifdef LOCKING_RESYNC_ENABLE
-#    undef LOCKING_RESYNC_ENABLE
+
+#ifndef NO_DEBUG
+#define NO_DEBUG
+#endif
+
+#if !defined(NO_PRINT) && !defined(CONSOLE_ENABLE)
+#define NO_PRINT
 #endif
 
 #define IGNORE_MOD_TAP_INTERRUPT
 #define PERMISSIVE_HOLD
-#define TAPPING_TERM 200
-
-#define NO_ACTION_ONESHOT
+#define TAPPING_TERM 150
 
 #ifdef COMBO_ENABLE
-  #define COMBO_COUNT 1
-  #define COMBO_TERM 180
+  #define COMBO_COUNT 12
+  #define COMBO_TERM 75
 #endif
+
+//#define NO_ACTION_ONESHOT

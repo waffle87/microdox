@@ -26,9 +26,6 @@ static void render_status(void) {
   } else if (layer_state_is(_RAISE)) {
     oled_write_ln_P(blink ? PSTR("       > hi_") : PSTR("       > hi "), false);
     oled_write_P(PSTR("       Layer: 02\n"), false);
-  } else if (layer_state_is(_ADJUST)) {
-    oled_write_ln_P(blink ? PSTR("       > adj_") : PSTR("       > adj "), false);
-    oled_write_P(PSTR("       Layer: 03\n"), false);
   } else {
     oled_write_ln_P(blink ? PSTR("       > _ ") : PSTR("       >     "), false);
     oled_write_P(PSTR("       Layer: 00\n"), false);
