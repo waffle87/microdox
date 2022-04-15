@@ -1,4 +1,4 @@
-## This guide is for v1 PCBs. Refer to [v2 guide](v2_guide.md) if you purchased your pcbs after April 2022.
+### This guide is for v1 PCBs. Refer to [v2 guide](v2_guide.md) if you purchased your pcbs after April 2022.
 
 # Parts Needed 
 ### Required 
