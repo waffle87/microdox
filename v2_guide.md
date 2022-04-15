@@ -75,7 +75,7 @@ you may need to reflow and add more solder a couple times before an adequate con
 2. Apply solder to all five pins.
 
 ## Firmware
-- Note, standard/v1 microdox firmware is not compatible with v2 PCBs.
+- Note, standard/v1 microdox firmware is not compatible with v2 PCBs. \
 Upstream support in QMK is currently pending. For now, the firmware can be found [here](https://github.com/waffle87/qmk_firmware/tree/microdox_v2/keyboards/boardsource/microdox/v2). \
 To begin, follow the [QMK setup guide](https://docs.qmk.fm/#/newbs_getting_started). \
 Once setup, you can manually add the files to your `qmk_firmware` directory, or have git do the work for you:
@@ -91,5 +91,5 @@ qmk compile -kb boardsource/microdox/v2 -km via
 For flashing instructions, see [doc](https://docs.qmk.fm/#/newbs_flashing) or [video](https://www.youtube.com/watch?v=fuBJbdCFF0Q)
 
 #### Extra
-For questions, ask in [boardsource discord server](https://discord.gg/5qpqbgaTYz)
+For questions, ask in [boardsource discord server](https://discord.gg/5qpqbgaTYz) \
 photos soon...
