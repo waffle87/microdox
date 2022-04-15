@@ -1,3 +1,5 @@
+## This guide is for v1 PCBs. Refer to [v2 guide](v2_guide.md) if you purchased your pcbs after April 2022.
+
 # Parts Needed 
 ### Required 
 | Item | Count |
@@ -6,7 +8,7 @@
 | PCB | 2 |
 | Elite-C or Pro Micro Controller | 2 |
 | Back Plate & Switch Plate | 2 | 
-| TRRS Jack | 2 | 
+| TRRS Jack (SMD) | 2 | 
 | TRRS Cable | 2 | 
 | Reset Switch | 2 | 
 | MX or Choc Hotswap Sockets | 36 | 
