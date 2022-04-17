@@ -40,8 +40,8 @@ you may need to reflow and add more solder a couple times before an adequate con
 \- It is wise to test the LEDs as you solder then. Consider [soldering your controllers beforehand](https://github.com/waffle87/microdox/blob/master/v2_guide.md#microcontrollers). \
 \- The LED order is somewhat outlined [here](https://github.com/waffle87/qmk_firmware/blob/microdox_v2/keyboards/boardsource/microdox/v2/v2.c#L8-#L17).
 1. Solder one pad. (it may be easier to solder all 4 pads before placing LED down when installing WS2812B LEDs)
-2. While holding led with tweezers, reflow solder and place LED down on pad.
-3. Solder remaining 4 pads.
+2. While holding LED with tweezers, reflow solder and place LED down on pad.
+3. Solder remaining pads.
 
 ## Microcontrollers
 **Orientation**: Both microcontrollers face down.
