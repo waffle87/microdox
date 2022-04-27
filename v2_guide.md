@@ -24,7 +24,6 @@
 | Piezo Buzzer (AST1109MLTRQ) | 2 |
 
 # Soldering
-
 ## Diodes
 **Orientation**: Black bar facing downwards or towards the microcontroller.
 1. Solder one pad.
@@ -38,7 +37,7 @@ you may need to reflow and add more solder a couple times before an adequate con
 - Notes: \
 \- This component is heat sensitive. Be cautious and work at a safe temp (~300c). \
 \- It is wise to test the LEDs as you solder then. Consider [soldering your controllers beforehand](https://github.com/waffle87/microdox/blob/master/v2_guide.md#microcontrollers). \
-\- The LED order is somewhat outlined [here](https://github.com/waffle87/qmk_firmware/blob/microdox_v2/keyboards/boardsource/microdox/v2/v2.c#L8-#L17).
+\- The LED order is somewhat outlined [here](https://github.com/qmk/qmk_firmware/blob/master/keyboards/boardsource/microdox/v2/v2.c#L8-#L17) and should be followed in order when building.
 1. Solder one pad. (it may be easier to solder all 4 pads before placing LED down when installing WS2812B LEDs)
 2. While holding LED with tweezers, reflow solder and place LED down on pad.
 3. Solder remaining pads.
@@ -69,27 +68,16 @@ you may need to reflow and add more solder a couple times before an adequate con
 1. Solder one pad.
 2. While holding hotswap socket (fingers are fine), reflow solder and place socket down on pad.
 3. Solder other pad.
-- Note, don't hesitate to use a little extra solder, as that will help secure the socket and prevent it from ripping off.
+- Note, don't hesitate to use a little extra solder, as that will help secure the socket and prevent it from being ripped off.
 ### Encoders
 1. Secure in place using tape or hands.
 2. Apply solder to all five pins.
 
 ## Firmware
-- Note, standard/v1 microdox firmware is not compatible with v2 PCBs. \
-Upstream support in QMK is currently pending. For now, the firmware can be found [here](https://github.com/waffle87/qmk_firmware/tree/microdox_v2/keyboards/boardsource/microdox/v2). \
-To begin, follow the [QMK setup guide](https://docs.qmk.fm/#/newbs_getting_started). \
-Once setup, you can manually add the files to your `qmk_firmware` directory, or have git do the work for you:
-```
-git remote add mdox_v2 https://github.com/waffle87/qmk_firmware.git
-git fetch mdox_v2
-git checkout mdox_v2 keyboards/boardsource/microdox/v2
-```
-Now those files should exist in your current branch, and can be compiled with
-```
-qmk compile -kb boardsource/microdox/v2 -km via
-```
+- Note, default/v1 microdox firmware is not compatible with v2 PCBs. \
+To begin, follow the [QMK setup guide](https://docs.qmk.fm/#/newbs_getting_started). (if working from an existing installation, an [update](https://docs.qmk.fm/#/newbs_git_using_your_master_branch?id=updating-your-master-branch) may be needed.) \
 For flashing instructions, see [doc](https://docs.qmk.fm/#/newbs_flashing) or [video](https://www.youtube.com/watch?v=fuBJbdCFF0Q)
 
 #### Extra
-For questions, ask in [boardsource discord server](https://discord.gg/5qpqbgaTYz) \
-photos soon...
+For questions, ask in [Boardsource Discord server](https://discord.gg/5qpqbgaTYz) \
+Photos soon...
