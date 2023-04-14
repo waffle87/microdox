@@ -44,7 +44,7 @@ you may need to reflow and add more solder a couple times before an adequate con
 - Notes: \
 \- This component is heat sensitive. Be cautious and work at a safe temp (~300c). \
 \- It is wise to test the LEDs as you solder then. Consider [soldering your controllers beforehand](https://github.com/waffle87/microdox/blob/master/v2_guide.md#microcontrollers). \
-\- The LED order is somewhat outlined [here](https://github.com/qmk/qmk_firmware/blob/master/keyboards/boardsource/microdox/v2/v2.c#L8-#L17) and should be followed in order when building.
+\- The LED order is somewhat outlined [here](https://github.com/qmk/qmk_firmware/blob/ad31ea3f515630f922ccad54cc879e13a05020fa/keyboards/boardsource/microdox/v2/v2.c#L8-#L17) and should be followed in order when building.
 1. Solder one pad. (it may be easier to solder all 4 pads before placing LED down when installing WS2812B LEDs)
 ![sk6812 mini e one pad](https://i.imgur.com/N3e43eK.jpeg)
 ![ws2812b 4 pads](https://i.imgur.com/eAuOY2N.jpeg)
